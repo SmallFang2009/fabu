@@ -1,28 +1,163 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta name="keywords" content="SmallFang, Smallfang,smallfang,网址发布,SmallFang的网址发布页,SmallFang的地盘" />
-<meta name="description" content="由于我所拥有的网站越来越多，我逐渐需要一个专门的网址发布页来发布我的各网站域名。这个就是我的成果。" />
+    <meta charset="UTF-8">
+    <title>SmallFang的地盘</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<title>SmallFang的地盘</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .search input {
+            width: 60%;
+            height: 40px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .search button {
+            width: 10%;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .search button:hover {
+            background-color: #555;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .nav a {
+            width: 25%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .nav a span {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav a {
+                width: 50%;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>欢迎来到SmallFang的网址发布页!</h1>
-<p>由于我所拥有的网站越来越多，我逐渐需要一个专门的网址发布页来发布我的各网站域名。这个就是我的成果。</p>
+    <div class="container">
+        <div class="logo">SmallFang的地盘</div>
+        <div class="search">
+            <input type="text" id="keyword" placeholder="请输入关键词...">
+            <button id="search">必应搜索</button>
+        </div>
+        <div class="nav">
+            <a href="https://blog.smallfang.us" target="_blank">
+                <i class="iconfont icon-smallfangblog"></i>
+                <span>SmallFang的个人博客</span>
+            </a>
+            <a href="https://chat.smallfang.us" target="_blank">
+                <i class="iconfont icon-chat"></i>
+                <span>Pandora ChatGPT</span>
+            </a>
+            <a href="https://bing.smallfang.us" target="_blank">
+                <i class="iconfont icon-bilibili"></i>
+                <span>BingAI</span>
+            </a>
+            <a href="https://pan2.smallfang.us" target="_blank">
+                <i class="iconfont icon-weibo"></i>
+                <span>SmallFang的私人网盘</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        // 获取搜索框和搜索按钮
+        var keyword = document.getElementById("keyword");
+        var search = document.getElementById("search");
 
-<p>SmallFang的个人博客：
-<a href="https://blog.smallfang.us">blog.smallfang.us</a>.<br/>
-ChatGPT国内版：
-<a href="https://chat.smallfang.us">chat.smallfang.us</a>.<br/>
-这个ChatGPT需要获取登录令牌（即Token）才能使用。为了防止一些同志不会操作，我办了一个公共账号，并会我的博客上每隔10天发布一次（因为其有效期就是10天）登录的Token。博客文章链接：
-<a href="https://blog.smallfang.us/cn/0007">Pandora版ChatGPT的使用</a>.<br/>
+        // 给搜索按钮添加点击事件
+        search.addEventListener("click", function () {
+            // 获取搜索框的内容
+            var value = keyword.value.trim();
+            // 判断是否为空
+            if (value) {
+                // 拼接百度搜索的网址
+                var url = "https://www.bing.com/search?q=" + value;
+                // 在新窗口打开网址
+                window.open(url, "_blank");
+            } else {
+                // 提示用户输入关键词
+                alert("请输入关键词");
+            }
+        });
 
-<p><em>感谢阅读。</em></p>
+        // 给搜索框添加回车事件
+        keyword.addEventListener("keyup", function (event) {
+            // 判断是否按下回车键
+            if (event.keyCode === 13) {
+                // 触发搜索按钮的点击事件
+                search.click();
+            }
+        });
+    </script>
 </body>
 </html>
