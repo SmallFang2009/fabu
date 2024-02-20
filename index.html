@@ -1,159 +1,101 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>SmallFang的地盘</title>
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            background: linear-gradient(to right, #00c6ff, #c471ed, #f7797d);
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
         }
-
         .container {
-            width: 80%;
-            max-width: 1200px;
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+        }
+        a {
+            color: #0099ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            display: block;
+            width: 200px;
             margin: 0 auto;
         }
-
-        .logo {
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin: 20px 0;
-        }
-
-        .search {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-        .search input {
-            width: 60%;
-            height: 40px;
-            border: none;
-            outline: none;
-            padding: 10px;
-            font-size: 18px;
-        }
-
-        .search button {
-            width: 10%;
-            height: 40px;
-            border: none;
-            outline: none;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .search button:hover {
-            background-color: #555;
-        }
-
-        .nav {
+        .links {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin: 20px 0;
         }
-
-        .nav a {
-            width: 25%;
-            height: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #333;
+        .link {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
             border: 1px solid #ccc;
-            margin: 5px;
-            transition: all 0.3s;
+            border-radius: 5px;
+            text-align: center;
         }
-
-        .nav a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .link:hover {
+            border-color: #0099ff;
         }
-
-        .nav a i {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .nav a span {
-            font-size: 18px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .nav a {
-                width: 50%;
-            }
+        .footer {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">SmallFang的地盘</div>
-        <div class="search">
-            <input type="text" id="keyword" placeholder="请输入关键词...">
-            <button id="search">必应搜索</button>
+        <h1>欢迎访问SmallFang的网址发布页</h1>
+        <p>这是我的网址发布页，你可以在这里找到我的网站的最新地址和联系方式，以及一些其他的信息。</p>
+        <img src="icon.ico" alt="logo" class="logo">
+        <div class="links">
+            <div class="link">
+                <a href="https://smallfang.us">SmallFang的个人博客</a>
+            </div>
+            <div class="link">
+                <a href="https://pan.smallfang.us">共享资源线路一</a>
+            </div>
+            <div class="link">
+                <a href="https://pan2.smallfang.us">共享资源线路二</a>
+            </div>
+            <div class="link">
+                <a href="https://pan3.smallfang.us">共享资源线路三</a>
+            </div>
+            <div class="link">
+                <a href="https://pan4.smallfang.us">共享资源线路四</a>
+            </div>
+            <div class="link">
+                <a href="https://pan6.smallfang.us">共享资源IPv6线路</a>
+            </div>
+            <div class="link">
+                <a href="https://chat.smallfang.us">Pandora ChatGPT</a>
+            </div>
         </div>
-        <div class="nav">
-            <a href="https://blog.smallfang.us" target="_blank">
-                <i class="iconfont icon-smallfangblog"></i>
-                <span>SmallFang的个人博客</span>
-            </a>
-            <a href="https://chat.smallfang.us" target="_blank">
-                <i class="iconfont icon-chat"></i>
-                <span>SmallFang的ChatGPT</span>
-            </a>
-            <a href="https://pan2.smallfang.us" target="_blank">
-                <i class="iconfont icon-weibo"></i>
-                <span>SmallFang的私人网盘</span>
-            </a>
-        </div>
+        <p>请使用Ctrl+D收藏本页，以便下次访问。</p>
+        <p>如果存在疑惑或问题，请发送邮件到 sfxf09@gmail.com 获取最新地址。</p>
+        <p>你也可以关注我的社交媒体账号，获取更多的更新和互动。</p>
+        </p>bilibili：<a href="https://space.bilibili.com/2005026043" target="_blank">SmallFang_-</a></p>
+        </p>Twitter：<a href="https://twitter.com/SmallFang2009" target="_blank">@SmallFang2009</a></p>
+        </p>GitHub：<a href="https://github.com/FangZirui-E5" target="_blank">FangZirui-E5</a></p>
+        <p class="footer">© 2024 SmallFang的网址发布页. All rights reserved.</p>
     </div>
-    <script>
-        // 获取搜索框和搜索按钮
-        var keyword = document.getElementById("keyword");
-        var search = document.getElementById("search");
-
-        // 给搜索按钮添加点击事件
-        search.addEventListener("click", function () {
-            // 获取搜索框的内容
-            var value = keyword.value.trim();
-            // 判断是否为空
-            if (value) {
-                // 拼接必应搜索的网址
-                var url = "https://www.bing.com/search?q=" + value;
-                // 在新窗口打开网址
-                window.open(url, "_blank");
-            } else {
-                // 提示用户输入关键词
-                alert("请输入关键词");
-            }
-        });
-
-        // 给搜索框添加回车事件
-        keyword.addEventListener("keyup", function (event) {
-            // 判断是否按下回车键
-            if (event.keyCode === 13) {
-                // 触发搜索按钮的点击事件
-                search.click();
-            }
-        });
-    </script>
 </body>
 </html>
